@@ -355,10 +355,18 @@
                         </a>
                         <ul aria-expanded="false">
                             {{-- this element to view all services page --}}
-                            <li><a href="{{ route('contacts.index') }}">{{ __('All Contacts') }}</a></li>
+                            <li><a href="{{ route('subscribe.index') }}">{{ __('Subscribe us') }}</a></li>
                         </ul>
                     </li>
-
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="fa fa-phone"></i>
+                            <span class="nav-text">{{ __('Subscribe us') }}</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            {{-- this element to view all services page --}}
+                            <li><a href="{{ route('subscribe.index') }}">{{ __('Subscribe us') }}</a></li>
+                        </ul>
+                    </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
                         <i class="fa fa-cog"></i>
                         <span class="nav-text">{{ __('Setting') }}</span>

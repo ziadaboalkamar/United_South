@@ -18,8 +18,10 @@ use App\Http\Controllers\ControlPanel\WebsitController;
 use App\Http\Controllers\ControlPanel\TestimonialController;
 use App\Http\Controllers\ControlPanel\AboutUsController;
 use App\Http\Controllers\ControlPanel\ProjectStationController;
+use App\Http\Controllers\ControlPanel\SubscribeController As Subscribe;
 use App\Http\Controllers\Front\HomePageController;
 use App\Http\Controllers\Front\ContactController;
+use App\Http\Controllers\Front\SubscribeController;
 use App\Models\about_us;
 use Illuminate\Support\Facades\Route;
 
@@ -108,6 +110,11 @@ Route::middleware('auth')
             Route::post('project_station/{project_station}', [ProjectStationController::class, 'update'])->name('update-project_station');
             Route::delete('project_station/{project_station}', [ProjectStationController::class, 'destroy'])->name('delete-project_station');
 
+
+            Route::get('Subscribe', [Subscribe::class, 'index'])->name('subscribe.index');
+            Route::delete('Subscribe/{subscribe}', [Subscribe::class, 'destroy'])->name('delete.subscribe');
+
+
         });
 //            start front end
 
@@ -117,6 +124,7 @@ Route::get('/AboutUs', [HomePageController::class, 'about'])->name('front.about.
 Route::get('/Team/Member', [HomePageController::class, 'team'])->name('front.team.member');
 Route::get('/Category/{service}', [HomePageController::class, 'services'])->name('front.services');
 Route::get('/Project/{project}', [HomePageController::class, 'project'])->name('front.project');
+Route::post('Client/Subscribe', [SubscribeController::class, 'store'])->name('client.subscribe');
 
 
 

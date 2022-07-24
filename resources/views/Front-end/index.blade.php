@@ -152,22 +152,22 @@
                         <div class="row">
                             <div class="col-6 col-sm-3 col-md-3 col-lg-6 col-xl-6">
                                 <div class="text_box">
-                                    <h2 class="text-center">6000+ <span>عميل </span></h2>
+                                    <h2 class="text-center">6000+ <span>{{__("Clients")}} </span></h2>
                                 </div>
                             </div>
                             <div class="col-6 col-sm-3 col-md-3 col-lg-6 col-xl-6">
                                 <div class="text_box">
-                                    <h2 class="text-center">200+ <span>برنامج</span></h2>
+                                    <h2 class="text-center">200+ <span>{{__("App")}}</span></h2>
                                 </div>
                             </div>
                             <div class="col-6 col-sm-3 col-md-3 col-lg-6 col-xl-6">
                                 <div class="text_box">
-                                    <h2 class="text-center">4.8 <span>تقيم العملاء</span></h2>
+                                    <h2 class="text-center">4.8 <span>{{__("Client Rate")}}</span></h2>
                                 </div>
                             </div>
                             <div class="col-6 col-sm-3 col-md-3 col-lg-6 col-xl-6">
                                 <div class="text_box">
-                                    <h2 class="text-center">250+ <span>انظمة</span></h2>
+                                    <h2 class="text-center">250+ <span>{{__("System")}}</span></h2>
                                 </div>
                             </div>
                         </div>
@@ -429,14 +429,14 @@
         <div class="container-fluid col-sm-12 col-md-11 col-lg-11">
             <div class="row align-items-center pb-4">
                 <div class="col-sm-12 col-md-12 col-lg-6">
-                    <h2 class="heading">اشترك معنا</h2>
-                    <h3 class="sub_heading mb-3">تلقا اشعار منا عن تنزيل اي مشروع جديد</h3>
+                    <h2 class="heading">{{__("Subscribe us")}}</h2>
+                    <h3 class="sub_heading mb-3">{{__("Receive a notification from us about the download of any new project")}}</h3>
                     <form id="subscribe-form" class="row no-gutters align-items-center">
                         <div class="mb-0 form-group">
-                            <input type="email" class="form-control" placeholder="الايميل" id="subscribe-email" required>
+                            <input type="email" name="email" class="form-control" placeholder="الايميل" id="subscribe-email" required>
                         </div>
 
-                        <button id="subscribe-button" type="submit" class="btn primary_button border-0">اشترك الان</button>
+                        <button id="subscribe-button" type="submit" class="btn primary_button border-0">{{__("Subscribe us")}}</button>
                     </form>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6 pb-5 pb-lg-0 ">
@@ -567,6 +567,31 @@
         });
     </script>
     <script>
+        function subscribeEmail(event) {
+            event.preventDefault();
+
+            $("#subscribe-button").text('Subscribing...');
+            var formData = {
+                email: $("#subscribe-email").val(),
+
+            };
+
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type: "POST",
+                url: "{{route("client.subscribe")}}",
+                data: formData,
+                dataType: "json",
+                encode: true,
+            }).done(function (data) {
+                $("#subscribe-email").val('');
+                $("#subscribe-button").text('Subscribed');
+            });
+
+            return false;
+        }
         $(document).ready(function () {
             // contact form submit
             $("#contact-form").submit(function (event) {
