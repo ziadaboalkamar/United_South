@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Google Sans';
+    src: url('GE-Flow-Regular.otf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url('JF-Flat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url('GE-Flow-Regular.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
