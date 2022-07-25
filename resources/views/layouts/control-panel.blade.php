@@ -355,7 +355,7 @@
                         </a>
                         <ul aria-expanded="false">
                             {{-- this element to view all services page --}}
-                            <li><a href="{{ route('subscribe.index') }}">{{ __('Subscribe us') }}</a></li>
+                            <li><a href="{{ route('contacts.index') }}">{{ __('Contact Us') }}</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
