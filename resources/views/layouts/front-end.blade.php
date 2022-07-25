@@ -31,6 +31,17 @@
     <link rel="icon" type="image/png" sizes="16x16"
           href="{{asset('storage/'. (App\Models\Websit::latest()->first()->favicon_image ?? 'assets/favicon.png'))}}">
 
+    @if(app()->getLocale() == "en")
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap" rel="stylesheet">
+        <style>
+            body{
+                font-family: 'Tajawal', sans-serif !important;
+            }
+        </style>
+        @endif
+
 </head>
 
 <body @if(app()->getLocale() == "ar") dir="rtl" @else dir="ltr" @endif class="home_page wow fadeIn dark_theme" data-wow-duration="1s">
@@ -66,6 +77,27 @@
                         <a href="" class="d-block" target="_blank">
                             <i class="zmdi zmdi-youtube-play"></i>
                         </a>
+
+
+                        <div class="dropdown show">
+                            <a class="btn btn-secondary dropdown-toggle language_dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="zmdi zmdi-google-earth"></i>
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <ul class="">
+                                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                        <li style="padding: 0.25rem 1.5rem;">
+                                            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                                {{ $properties['native'] }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
             </div>

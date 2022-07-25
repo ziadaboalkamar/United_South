@@ -29,7 +29,7 @@
 
                 <div class="col-sm-12 col-md-12 col-lg-6 col-xl-7">
                     <div class="banner_img text-center wow fadeInRight" data-wow-duration="0.9s">
-                        <img src="https://opuslab.works/images/banner_img.png" class="img-fluid" alt="">
+                        <img src="{{asset("Front/images/banner_img.png")}}" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
@@ -50,6 +50,7 @@
                         <div class="products-slider owl-carousel owl-theme">
                             @isset($services)
                                 @foreach($services as $service)
+
                             <div class="item">
                                 <a class=" border-0 nav-item nav-link active col" id="product_{{$service->id}}_tab" data-toggle="tab" href="#product_{{$service->id}}" role="tab" aria-controls="product_{{$service->id}}" aria-selected="true">
                                     <span> @if(app()->getLocale() == "ar") {{$service->name}} @else  {{$service->name_en}} @endif</span>
@@ -74,11 +75,13 @@
             <div class="tab-content " id="nav-tabContent" dir="rtl">
                 @isset($services)
                     @foreach($services as $service)
-                        <div class="tab-pane product_{{$service->id}}_tab fade" id="product_{{$service->id}}" role="tabpanel" aria-labelledby="product_{{$service->id}}_tab">
+
+                        <div class="tab-pane product_{{$service->id}}_tab fade @if($service->id == 1) show active @endif" id="product_{{$service->id}}" role="tabpanel" aria-labelledby="product_{{$service->id}}_tab">
                             <div class="container-fluid col-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="row">
 
                                     @foreach($service->projects as $project)
+
                                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
                                             <div class="card border-0" style="background: #642bff">
                                                 <a class="d-flex w-100" href="{{route("front.project",$project->id)}}">

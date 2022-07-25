@@ -2593,3 +2593,20 @@ html {
 .partner_section{
     background-color: var(--bg-color);
 }
+.language_dropdown{
+    background: none !important;
+    border: none !important;
+}
+.language_dropdown.dropdown-toggle::after{
+    display: none;
+}
+.language_dropdown.dropdown-toggle:focus{
+    outline: unset;
+}
+.dropdown-menu ul {
+    list-style: none;
+    padding-right: 0px;
+}
+.dropdown-menu ul li a {
+color: black;
+}
