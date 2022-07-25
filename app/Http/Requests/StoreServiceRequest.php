@@ -27,8 +27,8 @@ class StoreServiceRequest extends FormRequest
             'name' => 'required |max:50',
             'name_en' => 'required |max:50',
             'image' => 'nullable |image |mimes:png',
-            'description' => 'nullable |max:500',
-            'description_en' => 'nullable |max:500',
+            'description' => 'nullable |max:1000',
+            'description_en' => 'nullable |max:1000',
         ];
     }
 }
