@@ -30,8 +30,8 @@ class StoreProjectRequest extends FormRequest
             'service_id' => 'required |exists:services,id',
             'gallery' => 'nullable |array ',
             'during_date' => 'nullable |date',
-            'description' => 'nullable |max:500',
-            'description_en' => 'nullable |max:500',
+            'description' => 'nullable |max:10000',
+            'description_en' => 'nullable |max:10000',
         ];
     }
 }
