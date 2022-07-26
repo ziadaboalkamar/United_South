@@ -189,7 +189,7 @@
                         <a href="{{route("front.services",$service->id)}}" class="list-group-item list-group-item-action">
                             <div class="item-header d-flex">
                                 <h5 class="mb-1"> @if(app()->getLocale() == "ar") {{$service->name}} @else {{$service->name_en}} @endif </h5>
-                                <div class="img_box mr-0 ml-auto">
+                                <div class="img_box mr-0 ml-0">
                                     <img src="{{ asset('storage/'.$service->image) }}" class="img-fluid" alt="Crypto & NFT" loading="lazy">
                                 </div>
                             </div>
@@ -206,7 +206,7 @@
                         <a href="{{route("front.about.us")}}" class="list-group-item list-group-item-action">
                             <div class="item-header d-flex">
                                 <h5 class="mb-1">{{__("About Us")}}</h5>
-                                <div class="img_box mr-0 ml-auto">
+                                <div class="img_box mr-0 ml-0">
                                     <img src="{{asset("Front/images/Online classes.png")}}" class="img-fluid" alt="Social, Chatting & Calling" loading="lazy">
                                 </div>
                             </div>
@@ -220,7 +220,7 @@
                         <a href="{{route("front.team.member")}}" class="list-group-item list-group-item-action">
                             <div class="item-header d-flex">
                                 <h5 class="mb-1">{{__("Team")}}</h5>
-                                <div class="img_box mr-0 ml-auto">
+                                <div class="img_box mr-0 ml-0">
                                     <img src="{{asset("Front/images/team.png")}}" class="img-fluid" alt="Social, Chatting & Calling" loading="lazy">
                                 </div>
                             </div>
