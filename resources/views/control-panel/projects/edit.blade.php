@@ -46,7 +46,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="form-group">
                                 <label for="title" class="form-label">{{ __('Project Title in English') }}</label>
-                                <input type="text"  class="form-control" id="title" name="title_en" value="{{ old('title_en',$project->title) }}" required autofocus >
+                                <input type="text"  class="form-control" id="title" name="title_en" value="{{ old('title_en',$project->title_en) }}" required autofocus >
                             </div>
                         </div>
                         {{-- end project title --}}
