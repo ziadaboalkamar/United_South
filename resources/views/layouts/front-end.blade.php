@@ -39,6 +39,36 @@
             body{
                 font-family: 'Tajawal', sans-serif !important;
             }
+            form .form-group textarea,
+            form .form-group input {
+
+                font-family:'Tajawal', sans-serif !important;
+            }
+            form .form-group textarea::-webkit-input-placeholder,
+            form .form-group input::-webkit-input-placeholder {
+                font-family:'Tajawal', sans-serif !important;
+
+            }
+            form .form-group textarea:-ms-input-placeholder,
+            form .form-group input:-ms-input-placeholder {
+                font-family:'Tajawal', sans-serif !important;
+            }
+
+            form .form-group textarea::placeholder,
+            form .form-group input::placeholder {
+                font-family: 'Tajawal', sans-serif !important;
+            }
+
+            p,
+            span,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            li {      font-family:'Tajawal', sans-serif !important;
+            }
         </style>
         @endif
 
@@ -237,9 +267,16 @@
         <i class="zmdi zmdi-close-circle" style="font-size: 1.6rem;" id="cloesMenu"></i>
     </div>
 
+
+
 </div>
 <!--Category menu end-->
+<div class="social">
+    <ul>
+        <li><a href="" target="_blank"><img src="{{asset("Front/images/whatsapp.png")}}" alt=""></a></li>
 
+    </ul>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- <script src="js/popper.min.js"></script> -->

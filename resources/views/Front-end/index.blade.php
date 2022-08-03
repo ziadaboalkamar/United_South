@@ -83,7 +83,7 @@
                                     @foreach($service->projects as $project)
 
                                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                                            <div class="card border-0" style="background: #faa61a">
+                                            <div class="card border-0" style="background: #642bff">
                                                 <a class="d-flex w-100" href="{{route("front.project",$project->id)}}">
                                                     <div class="text-box">
                                                         <h2>@if(app()->getLocale() == "ar") {{$project->title}} @else {{$project->title_en}} @endif </h2>
@@ -340,10 +340,11 @@
                             </div>
                             <div class="text_box">
                                 <p>
-                                    {{$testimonial->description	}}
+                                    @if(app()->getLocale() == "ar")   {{$testimonial->description}} @else   {{$testimonial->description_en	}} @endif
+
                                 </p>
 
-                                <h2> {{$testimonial->name}}</h2>
+                                <h2>@if(app()->getLocale() == "ar") {{$testimonial->name}} @else {{$testimonial->name_en}} @endif </h2>
                             </div>
                         </div>
                     </div>

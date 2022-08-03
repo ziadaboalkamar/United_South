@@ -25,7 +25,9 @@ class StoreTestimonialRequest extends FormRequest
     {
         return [
             'name' => 'required |string',
-            'description' => 'nullable |max:500',
+            'name_en' => 'required |string',
+            'description' => 'required |max:500',
+            'description_en' => 'required |max:500',
         ];
     }
 }

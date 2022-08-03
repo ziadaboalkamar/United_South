@@ -46,8 +46,8 @@ class TestimonialController extends Controller
     {
 //        return $request;
         $data = $request->validated();
+//return $data;
 
-        $image = null;
 
         DB::beginTransaction();
 
@@ -61,7 +61,7 @@ class TestimonialController extends Controller
             DB::commit();
 
         }catch (Throwable $e) {
-
+return $e;
             DB::rollBack();
             return redirect()->route('all-testimonial')
                 ->with('error', 'Operation failed');

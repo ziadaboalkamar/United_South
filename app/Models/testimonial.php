@@ -9,6 +9,6 @@ class testimonial extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name','description'
+        'name','description','name_en','description_en'
     ];
 }

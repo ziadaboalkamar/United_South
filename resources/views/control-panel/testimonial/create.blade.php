@@ -38,14 +38,30 @@
                         </div>
                         {{-- end service name --}}
 
+                        {{-- service name --}}
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="form-group">
+                                <label for="name" class="form-label">{{ __('Client Name En') }}</label>
+                                <input type="text"  class="form-control" id="name" name="name_en" value="{{ old('name_en') }}" required autofocus >
+                            </div>
+                        </div>
+                        {{-- end service name --}}
+
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="form-group">
                                 <label for="price" class="form-label">{{ __('Description') }}</label>
-                                <input type="text"  class="form-control" id="price" name="description" value="{{ old('description') }}" required autofocus >
+                                <textarea name="description" id="description" class="form-control" rows="4">{{ old('description') }}</textarea>
+
                             </div>
                         </div>
 
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="form-group">
+                                <label for="price" class="form-label">{{ __('Description En') }}</label>
+                                <textarea name="description_en" id="description" class="form-control" rows="4">{{ old('description_en') }}</textarea>
 
+                            </div>
+                        </div>
 
 
 
