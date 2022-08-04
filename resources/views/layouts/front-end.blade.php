@@ -128,6 +128,11 @@
                                     <i class="zmdi zmdi-behance"></i>
                                 </a>
                             @endif
+                            @if(isset(App\Models\Websit::latest()->first()->whatsapp))
+                                <a href="{{App\Models\Websit::latest()->first()->whatsapp}}" class="d-block" target="_blank">
+                                    <i class="zmdi zmdi-whatsapp"></i>
+                                </a>
+                            @endif
 
                         <div class="dropdown show">
                             <a class="btn btn-secondary dropdown-toggle language_dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -291,13 +296,14 @@
 
 </div>
 <!--Category menu end-->
+@if(isset(App\Models\Websit::latest()->first()->whatsapp))
 <div class="social">
     <ul>
-        <li><a href="" target="_blank"><img src="{{asset("Front/images/whatsapp.png")}}" alt=""></a></li>
+        <li><a href="{{App\Models\Websit::latest()->first()->whatsapp}}" target="_blank"><img src="{{asset("Front/images/whatsapp.png")}}" alt=""></a></li>
 
     </ul>
 </div>
-
+@endif
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- <script src="js/popper.min.js"></script> -->
 <script src="{{asset('Front/js/bootstrap.min.js')}}"></script>
