@@ -98,16 +98,36 @@
                     <h2>&nbsp;</h2>
 
                     <div class="icon_box d-flex">
-                        <a href="" class="d-block" target="_blank">
+                        @if(isset(App\Models\Websit::latest()->first()->facebook))
+                        <a href="{{App\Models\Websit::latest()->first()->facebook}}" class="d-block" target="_blank">
                             <i class="zmdi zmdi-facebook"></i>
                         </a>
-                        <a href="" class="d-block" target="_blank">
+                        @endif
+                            @if(isset(App\Models\Websit::latest()->first()->twitter))
+                        <a href="{{App\Models\Websit::latest()->first()->twitter}}" class="d-block" target="_blank">
+                            <i class="zmdi zmdi-twitter"></i>
+                        </a>
+                            @endif
+                            @if(isset(App\Models\Websit::latest()->first()->linkedin))
+                        <a href="{{App\Models\Websit::latest()->first()->linkedin}}" class="d-block" target="_blank">
+                            <i class="zmdi zmdi-linkedin"></i>
+                        </a>
+                            @endif
+                            @if(isset(App\Models\Websit::latest()->first()->instagram))
+                        <a href="{{App\Models\Websit::latest()->first()->instagram}}" class="d-block" target="_blank">
                             <i class="zmdi zmdi-instagram"></i>
                         </a>
-                        <a href="" class="d-block" target="_blank">
+                            @endif
+                            @if(isset(App\Models\Websit::latest()->first()->youtube))
+                        <a href="{{App\Models\Websit::latest()->first()->youtube}}" class="d-block" target="_blank">
                             <i class="zmdi zmdi-youtube-play"></i>
                         </a>
-
+                            @endif
+                            @if(isset(App\Models\Websit::latest()->first()->behance))
+                                <a href="{{App\Models\Websit::latest()->first()->behance}}" class="d-block" target="_blank">
+                                    <i class="zmdi zmdi-behance"></i>
+                                </a>
+                            @endif
 
                         <div class="dropdown show">
                             <a class="btn btn-secondary dropdown-toggle language_dropdown" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
