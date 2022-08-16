@@ -220,6 +220,10 @@
     "Partner": "شركائنا",
     "For complete application with administration panel.": " للحصول على التطبيق الكامل مع لوحة الإدارة.",
     "Call us": "اتصل بنا",
-    "Client Name En": "اسم العميل في اللغة الانجليزية"
+    "Client Name En": "اسم العميل في اللغة الانجليزية",
+    "Sales Phone":"المبيعات ",
+    "Mrketing Phone":"الدعاية والاعلان",
+    "Support Phone":"الدعم الفني"
+
 
 }

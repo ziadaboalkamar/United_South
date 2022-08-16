@@ -44,6 +44,7 @@ header {
 
 header .navbar .navbar-brand img {
     max-width: 275px;
+
 }
 
 header .navbar .follow_us h2 {
@@ -2020,7 +2021,16 @@ footer .delivery_boy {
     -webkit-animation: banner_img 2s both alternate infinite;
     animation: banner_img 2s both alternate infinite;
 }
-
+.about .img_box  img {
+    /* animation: techstack_1 1s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; */
+    -webkit-animation: banner_img 2s both alternate infinite;
+    animation: banner_img 2s both alternate infinite;
+}
+.contact_us .img_box  img {
+    /* animation: techstack_1 1s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; */
+    -webkit-animation: banner_img 2s both alternate infinite;
+    animation: banner_img 2s both alternate infinite;
+}
 .get_it_app2 {
     background: var(--bg-color);
     border-radius: 6px;
@@ -2285,6 +2295,13 @@ footer .delivery_boy {
     header .navbar .navbar-brand img {
         max-width: 250px;
     }
+    footer .navbar-brand img{
+        max-width: 250px;
+    }
+    footer .navbar-brand{
+        text-align: center;
+    }
+
 }
 
 @media (max-width: 768px) {

@@ -5,7 +5,7 @@
  * Version - 3.6.0
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
  *
- * Copyright (c) 2018 Daniel Eden
+ * Copyright (c) 2018 DanifadeInRightel Eden
  */
 
 .animated {
@@ -1439,7 +1439,7 @@
   }
 }
 
-@keyframes fadeInLeftBig { 
+@keyframes fadeInLeftBig {
   from {
     opacity: 0;
     -webkit-transform: translate3d(-2000px, 0, 0);

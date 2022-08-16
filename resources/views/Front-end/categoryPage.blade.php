@@ -39,7 +39,7 @@
                             @isset($service->projects)
                                 @foreach($service->projects as $project)
                                     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                                        <div class="card border-0" style="background: #642bff">
+                                        <div class="card border-0" style="background: #faa61a">
                                             <a class="d-flex w-100" href="{{route("front.project",$project->id)}}">
                                                 <div class="text-box">
                                                     <h2>@if(app()->getLocale() == "ar") {{$project->title}} @else {{$project->title_en}} @endif </h2>

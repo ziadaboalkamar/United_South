@@ -83,7 +83,7 @@
                                     @foreach($service->projects as $project)
 
                                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                                            <div class="card border-0" style="background: #642bff">
+                                            <div class="card border-0" style="background: #faa61a">
                                                 <a class="d-flex w-100" href="{{route("front.project",$project->id)}}">
                                                     <div class="text-box">
                                                         <h2>@if(app()->getLocale() == "ar") {{$project->title}} @else {{$project->title_en}} @endif </h2>
@@ -137,7 +137,7 @@
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9 pb-md-5 pb-lg-0">
                     <div class="row row no-gutters align-items-center px-3 px-xl-0">
                         <div class="col-12 col-lg-6">
-                            <div class="img_box d-none d-lg-block wow fadeInUp" data-wow-duration=".5s">
+                            <div class="img_box d-none d-lg-block wow fadeInRight" data-wow-duration=".5s">
                                 <img src="{{asset('Front/images/aboutus.png')}}" class="img-fluid col-12 col-xl-11" alt="">
                             </div>
                         </div>
