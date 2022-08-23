@@ -71,6 +71,10 @@
                                 </tbody>
                             </table>
                             {{-- end table --}}
+                            <br>
+                            <br>
+                            <br>
+                            {{$projects->links()}}
                         </div>
                     </div>
                 </div>

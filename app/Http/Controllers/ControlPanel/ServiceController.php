@@ -16,7 +16,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $services = Service::paginate();
+        $services = Service::paginate(10);
 
         return view('control-panel.services.index',[
             'services' => $services,

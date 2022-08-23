@@ -68,6 +68,11 @@
                                 </tbody>
                             </table>
                             {{-- end table --}}
+
+                            <br>
+                            <br>
+                            <br>
+                            {{$services->links()}}
                         </div>
                     </div>
                 </div>
